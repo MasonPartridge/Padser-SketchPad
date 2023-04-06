@@ -36,6 +36,12 @@ body {
 
 h1 {
     font-size: 300%;
+    margin-bottom: 8px;
+}
+
+h2 {
+    margin-top: 0px;
+    margin-bottom: 64px;
 }
 
 h1, h2 {
@@ -49,7 +55,6 @@ h3 {
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 #header-container {
@@ -65,6 +70,7 @@ h3 {
 
 #sketchpad-container {
     margin: 0 auto;
+    justify-content: center;
 }
 
 #footer-container {

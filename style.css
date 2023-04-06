@@ -1,0 +1,19 @@
+.pixel {
+    width: 25px;
+    height: 25px;
+    border: 2px solid black;
+}
+
+#sketch-pad {
+    display: flex;
+    flex-direction: row;
+}
+
+.x-axis {
+    display: flex;
+    flex-direction: column;
+}
+
+.highlighted {
+    background-color: black;
+}

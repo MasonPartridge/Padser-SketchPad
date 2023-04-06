@@ -1,6 +1,7 @@
 var sketchPadDiv = document.createElement('div');
 sketchPadDiv.setAttribute('id', 'sketch-pad');
 var isUserClicking = false;
+var pixelCanvasSize = 16;
 
 for (var i = 0; i < 16; i++){
     let xDiv = document.createElement('div');
@@ -18,7 +19,7 @@ for (var i = 0; i < 16; i++){
     }    
 }
 
-document.body.appendChild(sketchPadDiv);
+document.getElementById('sketchpad-container').appendChild(sketchPadDiv);
 
 document.body.onmousedown = function() {
     isUserClicking = true;
@@ -26,4 +27,10 @@ document.body.onmousedown = function() {
 
 document.body.onmouseup = function() {
     isUserClicking = false;
+}
+
+var pixels = document.getElementsByClassName('pixel');
+for (var i = 0; i < pixels.length; i++){
+    pixels[i].style.width = (50/pixelCanvasSize + 'vh');
+    pixels[i].style.height = (50/pixelCanvasSize + 'vh');
 }

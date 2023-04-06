@@ -1,3 +1,14 @@
+#main-container {
+    display: flex;
+    flex-direction: row;
+    background-color: #ddbea9;
+    color:aliceblue;
+    justify-content: space-between;
+}
+body {
+    margin: 0px;
+}
+
 .pixel {
     width: 25px;
     height: 25px;
@@ -7,6 +18,11 @@
 #sketch-pad {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    margin: 16px;
+    background-color: #ffe8d6;
+    padding: 32px;
+    border-radius: 8%;
 }
 
 .x-axis {
@@ -16,4 +32,42 @@
 
 .highlighted {
     background-color: black;
+}
+
+h1 {
+    font-size: 300%;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h3 {
+    margin: 0%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#header-container {
+    background-color: #6b705c;
+    height: 100vh;
+    padding: 16px;
+}
+
+#reserve-right-bar {
+    height: 100vh;
+    padding: 16px;
+}
+
+#sketchpad-container {
+    margin: 0 auto;
+}
+
+#footer-container {
+    padding: 8px;
+    background-color: #cd997e;
 }

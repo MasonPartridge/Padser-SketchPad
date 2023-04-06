@@ -1,3 +1,13 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 #main-container {
     display: flex;
     flex-direction: row;
@@ -61,11 +71,7 @@ h3 {
     background-color: #6b705c;
     height: 100vh;
     padding: 16px;
-}
-
-#reserve-right-bar {
-    height: 100vh;
-    padding: 16px;
+    width: 12%;
 }
 
 #sketchpad-container {
@@ -76,4 +82,12 @@ h3 {
 #footer-container {
     padding: 8px;
     background-color: #cd997e;
+}
+
+#canvas-size-input-container {
+    display: flex;
+}
+
+#canvas-size-input {
+    flex: 1;
 }

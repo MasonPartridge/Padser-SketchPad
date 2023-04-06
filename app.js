@@ -1,4 +1,5 @@
 var isUserClicking = false;
+var isEraserActive;
 var pixelCanvasSize = 16;
 
 function drawCanvas(){
@@ -17,11 +18,21 @@ function drawCanvas(){
               };
             yDiv.onmouseover = function(){
                 if (isUserClicking){
-                    yDiv.classList.add('class', 'highlighted');
+                    if (!isEraserActive) {
+                        yDiv.classList.add('class', 'highlighted');
+                    }
+                    else {
+                        yDiv.classList.remove('class', 'highlighted');
+                    }
                 }    
             }
             yDiv.addEventListener('click', function(e) {
-                yDiv.classList.add('class', 'highlighted');
+                if (!isEraserActive) {
+                    yDiv.classList.add('class', 'highlighted');
+                }
+                else {
+                    yDiv.classList.remove('class', 'highlighted');
+                }
             })
             xDiv.appendChild(yDiv);
         }    
@@ -96,3 +107,17 @@ function changeCanvasSize(newCanvasPixelSize){
     sketchpad.removeChild(sketchpad.firstElementChild);
     sketchpad.appendChild(drawCanvas());
 }
+
+var eraserButton = document.getElementById('eraser-button');
+var clearButton = document.getElementById('clear-button');
+
+eraserButton.addEventListener('click', function(){
+    if (!isEraserActive){
+        isEraserActive = true;
+        eraserButton.classList.add('class', 'pressed');
+    }
+    else {
+        isEraserActive = false;
+        eraserButton.classList.remove('class', 'pressed');
+    }
+})

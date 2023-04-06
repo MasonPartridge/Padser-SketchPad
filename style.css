@@ -97,3 +97,7 @@ h3 {
     flex: 1;
     width: 8vw;
 }
+
+.pressed {
+    background-color: #b7b7a4;
+}

@@ -78,14 +78,14 @@ function refreshCanvasSizeInputBox(){
 
 function changeCanvasSize(newCanvasPixelSize){
     console.log(newCanvasPixelSize);
-    if ( newCanvasPixelSize <= 34){
+    if ( newCanvasPixelSize <= 32){
         pixelCanvasSize = newCanvasPixelSize;
     }
     else if (newCanvasPixelSize < 0){
         pixelCanvasSize = 0;
     }
     else {
-        pixelCanvasSize = 34;
+        pixelCanvasSize = 32;
     }
     refreshCanvasSizeInputBox();
     sketchpad.removeChild(sketchpad.firstElementChild);

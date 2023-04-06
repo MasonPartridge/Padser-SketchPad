@@ -12,11 +12,17 @@ function drawCanvas(){
         for (var i2 = 0; i2 < pixelCanvasSize; i2++){
             let yDiv = document.createElement('div');
             yDiv.setAttribute('class','y-axis pixel');
+            yDiv.ondragstart = () => {
+                return false;
+              };
             yDiv.onmouseover = function(){
                 if (isUserClicking){
                     yDiv.classList.add('class', 'highlighted');
                 }    
             }
+            yDiv.addEventListener('click', function(e) {
+                yDiv.classList.add('class', 'highlighted');
+            })
             xDiv.appendChild(yDiv);
         }    
     }

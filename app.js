@@ -121,3 +121,7 @@ eraserButton.addEventListener('click', function(){
         eraserButton.classList.remove('class', 'pressed');
     }
 })
+
+clearButton.addEventListener('click', function() {
+    changeCanvasSize(pixelCanvasSize);
+})

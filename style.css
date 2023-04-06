@@ -20,24 +20,28 @@ body {
 }
 
 .pixel {
-    width: 25px;
-    height: 25px;
+    width: auto;
+    height: auto;
     border: 2px solid black;
+    flex: auto;
 }
 
 #sketch-pad {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 16px;
+    margin: 8px;
     background-color: #ffe8d6;
-    padding: 32px;
+    padding: 4vw;
     border-radius: 8%;
+    width: 32vw;
+    height: 32vw;
 }
 
 .x-axis {
     display: flex;
     flex-direction: column;
+    flex: auto;
 }
 
 .highlighted {
@@ -71,7 +75,8 @@ h3 {
     background-color: #6b705c;
     height: 100vh;
     padding: 16px;
-    width: 12%;
+    width: 16vw;
+    min-width: 226px;
 }
 
 #sketchpad-container {
@@ -90,4 +95,5 @@ h3 {
 
 #canvas-size-input {
     flex: 1;
+    width: 8vw;
 }

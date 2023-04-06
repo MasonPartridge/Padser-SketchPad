@@ -77,12 +77,11 @@ function refreshCanvasSizeInputBox(){
 }
 
 function changeCanvasSize(newCanvasPixelSize){
-    console.log(newCanvasPixelSize);
-    if ( newCanvasPixelSize <= 32){
-        pixelCanvasSize = newCanvasPixelSize;
-    }
-    else if (newCanvasPixelSize < 0){
+    if (newCanvasPixelSize < 0){
         pixelCanvasSize = 0;
+    }
+    else if ( newCanvasPixelSize <= 32){
+        pixelCanvasSize = newCanvasPixelSize;
     }
     else {
         pixelCanvasSize = 32;

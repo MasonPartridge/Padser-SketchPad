@@ -1,3 +1,5 @@
+const PAINTCOLORS = ['black', 'white', 'blue', 'orange', 'red', 'green'];
+var currentActiveColorIndex = 0;
 var isUserClicking = false;
 var isEraserActive;
 var pixelCanvasSize = 16;
@@ -18,27 +20,26 @@ function drawCanvas(){
               };
             yDiv.onmouseover = function(){
                 if (isUserClicking){
-                    if (!isEraserActive) {
-                        yDiv.classList.add('class', 'highlighted');
-                    }
-                    else {
-                        yDiv.classList.remove('class', 'highlighted');
-                    }
+                    paintPixel(yDiv);        
                 }    
             }
             yDiv.addEventListener('click', function(e) {
-                if (!isEraserActive) {
-                    yDiv.classList.add('class', 'highlighted');
-                }
-                else {
-                    yDiv.classList.remove('class', 'highlighted');
-                }
+                paintPixel(yDiv);
             })
             xDiv.appendChild(yDiv);
         }    
     }
 
     return sketchPadDiv;
+}
+
+function paintPixel(yDiv) {
+    if (!isEraserActive) {
+        yDiv.setAttribute('class','y-axis pixel ' + PAINTCOLORS[currentActiveColorIndex]);
+    }
+    else {
+        yDiv.setAttribute('class','y-axis pixel');
+    }
 }
 
 var sketchpad = document.getElementById('sketchpad-container');
@@ -125,3 +126,18 @@ eraserButton.addEventListener('click', function(){
 clearButton.addEventListener('click', function() {
     changeCanvasSize(pixelCanvasSize);
 })
+
+var colorButtons = document.getElementsByClassName('color-button');
+
+console.log(colorButtons);
+
+for (var i = 0; i < colorButtons.length; i++){
+    console.log(i);
+    colorButtons[i].addEventListener('click', function(e) {
+        for (var i2 = 0; i2 < PAINTCOLORS.length; i2++){
+            if (e.target.classList.contains(PAINTCOLORS[i2])){
+                currentActiveColorIndex = i2;
+            }
+        }
+    })
+}

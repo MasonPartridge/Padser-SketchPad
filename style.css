@@ -15,6 +15,7 @@ input[type=number] {
     color:aliceblue;
     justify-content: space-between;
 }
+
 body {
     margin: 0px;
 }
@@ -100,4 +101,37 @@ h3 {
 
 .pressed {
     background-color: #b7b7a4;
+}
+
+.color-button {
+    width: 25px;
+    height: 25px;
+}
+
+#color-selector-container {
+    margin-top: 16px;
+}
+
+.blue {
+    background-color: #223843;
+}
+
+.orange {
+    background-color: #d77a61;
+}
+
+.white {
+    background-color: #dbd3d8;
+}
+
+.black {
+    background-color: black;
+}
+
+.red {
+    background-color: #723d46;
+}
+
+.green {
+    background-color: #c9cba3;
 }
